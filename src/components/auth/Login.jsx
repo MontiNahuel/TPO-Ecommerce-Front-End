@@ -63,7 +63,7 @@ function Login() {
                 </div>
                 <button className="lf--submit" onClick={handleIniciarSesion}>Iniciar Sesion</button>
             </form>
-            <a class='lf--forgot' href='#'>Forgot password?</a>
+            <a class='lf--forgot' href='/forgot'>Forgot password?</a>
             <a class='lf--forgot' href='/register'>Registarse</a>
         </div>
     );

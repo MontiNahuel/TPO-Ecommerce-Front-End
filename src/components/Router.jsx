@@ -7,6 +7,7 @@ import Catalogo from "./Catalogo";
 import Carrito from "./Carrito";
 import Navbar from "./Navbar";
 import Register from "./auth/Register";
+import ForgotPassword from "./auth/ForgotPassword";
 
 function RouterComponent() {
 
@@ -23,10 +24,11 @@ function RoutesComponent() {
     const location = useLocation();
     return (
         <>
-            {(location.pathname !== '/' && location.pathname !== '/register') && <Navbar />}
+            {(location.pathname !== '/' && location.pathname !== '/register' && location.pathname !== '/forgot') && <Navbar />}
             <Routes>
                 <Route path="/" element={isAuthenticated ? <Navigate to="/catalogo" /> : <Login />} />
                 <Route path="/register" element={<Register />}/>
+                <Route path="/forgot" element={<ForgotPassword />}/>
                 {/* Rutas que requieren CarritoProvider */}
                 <Route 
                     path="/catalogo" 
